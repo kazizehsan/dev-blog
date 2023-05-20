@@ -23,10 +23,10 @@ timezone: Asia/Dhaka
 
 title: Kazi Ehsan Aziz                          # the main title
 
-tagline: Developer Blog   # it will display as the sub-title
+tagline: dev-blog   # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
-  Developer Blog is a software development quickbook and diary for Kazi Ehsan Aziz.
+  dev-blog is a software development notebook for personal use by Kazi Ehsan Aziz.
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
 url: 'https://kazizehsan.github.io'
