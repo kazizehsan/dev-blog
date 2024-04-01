@@ -1,8 +1,8 @@
 ---
 title: Jekyll, Chirpy and the Github Pages
 date: 2022-04-24 12:54:00 +0600
-categories: [Blogging, Hosting, Guides]
-tags: [ruby, bundle, blog, blogging, host, hosting, jekyll, chirpy, theme, jekyll-theme, github, github-pages]
+categories: [Guides, Hosting]
+tags: [guide, ruby, bundle, blog, blogging, host, hosting, jekyll, chirpy, theme, jekyll-theme, github, github-pages]
 ---
 
 > **Github Pages lets you host Jekyll sites and Chirpy makes it even easier.**
