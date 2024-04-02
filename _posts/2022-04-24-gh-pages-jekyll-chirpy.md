@@ -36,3 +36,25 @@ bundle lock --add-platform x86_64-linux
     * updated `url` to `https://<GH_USERNAME>.github.io`
 5. Then pushed to `main` branch. That triggered the `/.github/workflows/pages-deploy.yml`{: .filepath} and the branch `gh-pages` on github was automatically created and site build was also successful.
 6. Then went to `repository on GitHub > Settings > Pages` and as `Source`, chose `gh-pages` as the branch and `/(root)` as the root folder. Shortly afterwards, the site became accessible.
+
+## Launch locally
+```shell
+bundle exec jekyll serve
+```
+
+## Custom domain
+GitHub Pages can be configured with a custom domain. GitHub's documentations are pretty comprehensive and easy to follow, but let's go over some of the key steps that GitHub will make you perform in order to configure a custom domain.
+
+1. **Verify domain**: GitHub will want to know that you really own the custom domain that you claim to own. This is accomplished by GH providing you with a `TXT` record details that you must create on your DNS provider.
+2. **Add domain to repo in GH**: On your GH repository page, go to "Settings" > "Code and automation" > "Pages" > "Custom domain", type your custom domain, then click Save. Since I was publishing my site from a branch, this created a commit that added a `CNAME` file directly to the root of my source branch (gh-pages).
+3. **Create A records on your DNS provider**: Time to create some `A` records on your DNS provider. These `A` records will point your apex custom domain (YOURDOMAIN.COM) to GitHub Pages server IP addresses. Be sure to delete any existing `A` records that might point to some other IP addresses. Check if it worked:
+```shell
+dig YOURDOMAIN.COM +noall +answer -t A
+```
+4. **Redirect subdomain**: You can redirect a subdomain like `www` by creating a `CNAME` record on your DNS provider so that the subdomain points to `<GH_USERNAME>.github.io`. Check if it worked:
+```shell
+dig WWW.YOURDOMAIN.COM +nostats +nocomments +nocmd
+```
+
+    > If you want to host directly at `https://YOURDOMAIN.COM`, then no need to rename the repo to `<GH_USERNAME>.github.io`. Only in `_config.yml`, set `baseurl` to `''`.
+    {: .prompt-info }
