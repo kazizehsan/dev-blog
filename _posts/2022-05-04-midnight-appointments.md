@@ -5,6 +5,8 @@ categories: [Experiences]
 tags: [timezone, UTC]
 ---
 
+> **When one's availability today translates to another's tomorrow.**
+
 ![Desktop View](/assets/img/bg/richard-tao-iM5bGdqB2Gg-unsplash.jpg){: w="700" h="400" }
 _Photo by <a href="https://unsplash.com/@richardtao28?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Richard Tao</a> on <a href="https://unsplash.com/photos/white-and-black-kanji-text-signage-iM5bGdqB2Gg?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>_
   
